@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>我的购物车-京东商城</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			#header{
+				height:30.5px;
+				width:auto;
+				background-color:#E3E4E5;
+				font-size:12px;
+				color:darkgray;
+				padding-left:265px;
+				line-height:30.5px;
+				text-align:center;
+			}
+			#header .div1{
+				float:left;
+			}
+			#header .div1 a{
+					text-decoration: none;
+					color:darkgray;
+					padding-right:10px;
+			}
+			#header .div1 img{
+				position:relative;
+				top:4px;
+				left:0px;
+				margin-right:5px;
+			}
+			#header .div2{
+				height:30.5px;
+				margin-right:150px;
+			}
+			#header .div2 a{			
+				text-decoration: none;
+				color:darkgray;
+				padding-top:2px;
+				padding-right:6px;
+			}
+			#header .div2 #red{
+				color:red;
+			}
+			#header .div2 img{
+				position:relative;
+				top:2px;
+				left:5px;
+				margin-right:5px;
+			}
+			#header a:hover{
+				font-size:16;
+				color:red;
+			}
+			#address:hover{
+				display:block;
+				float:right;
+				height:30.5px;
+				background-color:white;
+				position:relative;
+				top:-2px;
+				left:3.5px;
+				margin-right:3.5px;
+			}
+			#nav img{
+				clear:right;
+				padding-top:20px;
+				margin-left:265px;
+				
+			}
+			#nav #input{
+				width:250px;
+				height:17px;
+				margin-buttom:50px;
+				margin-left:450px;
+				border:#C91623 solid 1px;
+				border-width:1.5px 1px 2px 2px;
+				padding:3px 5px;
+				color:darkgray;
+				clear:right;
+			}
+			#nav span{
+				font-size:20px;
+				color:darkslategray;
+				text-align:center;
+			}
+			#nav button{
+				border:none;
+				width:40px;
+				height:26.5px;
+				color:white;
+				font-weight:10;
+				background-color:#C91623;
+				text-align:center;
+			}
+			#left,#right{
+				float:left;
+				width:274.5px;
+				height:50px;
+			}
+			#absolute img{
+				margin-top:150px;
+				display:block;
+				float:right;
+				clear:right;
+			}
+			#middle{
+				margin-top:50px;
+				float:left;
+				width:970px;
+				height:auto;
+				/* background-color:lightseagreen; */
+			}
+			#login{
+				width:928px;
+				border:1px solid #EDD28B;
+				height:28px;
+				line-height:25px;
+				color:#FF7700;
+				background-color:#FFFDEE;
+				margin-bottom:20px;
+				padding:10px 20px;
+				font-size:12px;
+			}
+			#login img{
+				vertical-align:middle;
+			}
+			#login button{
+				font-size:12px;
+				background-color:#E74649;
+				border:0;
+				height:25px;
+				color:#FFFFFF;
+				text-align:25px;
+				border-radius:3px;
+				padding:0 10px;
+				vertical-align:middle;
+			}
+			#loginbar{
+				color:#E2231A;
+				height:37px;
+			}
+			#loginbar a{
+				color:#E2231A;
+				height:26px;
+				font-weight:700;
+				line-height:26px;
+				font-size:16px;
+				text-decoration:none;
+			}
+			#loginbar select{
+				position:relative;
+				top:0;
+				left:631px;
+				line-height:23px;
+				font-size:12px;
+				color:darkgray;
+			}
+			#loginbar .right{
+				position:relative;
+				top:0px;
+				left:632px;
+				font-size:12px;
+				color:darkgray;
+			}
+			#loginbar p{
+				margin-top:-8px;
+			}
+			#footer{
+				height:560px;
+				clear:left;
+			}
+			#footer .hr1{
+				width:100%;
+				position:relative;
+				top:103px;
+				border-color:#A9A9A9;
+				border-width:0.15px;
+			}
+			#footer .hr2{
+				width:100%;
+				position:relative;
+				top:303px;
+				border-color:#A9A9A9;
+				border-width:0.15px;
+			}
+			#footer div{
+				float:left;
+				height:560px;
+			}
+			#footerleft,#footerright{
+				width:274.5px;
+				background-color:#eaeaea;
+			}
+			#footermiddle{
+				width:970px;
+				background-color:#eaeaea;
+			}
+			#footermiddle .foot1{
+				height:43px;
+				width:896px;
+				color:#444;
+				font-size:18px;
+				font-weight:700;
+				padding:30px 37px;
+			}
+			#footermiddle .foot1 img{
+				vertical-align:middle;
+				margin-right:8px;
+			}
+			#footermiddle .foot1 span{
+				line-height:42px;
+				height:42px;
+				margin-right:8px;
+			}
+			#footermiddle .foot2{
+				height:200px;
+				margin-bottom:18px;
+			}
+			#footermiddle .foot2 dl{
+				float:left;
+			}
+			#footermiddle .foot2 dt{
+				font-size:14px;
+				font-weight:700;
+				color:#777777;
+				padding-bottom:6px;
+				height:22px;
+				line-height:22px;
+				margin-top:20px;
+				margin-left:37px;
+				margin-right:101px;
+			}
+			#footermiddle .foot2 dd{
+				font-size:12px;
+				height:22px;
+				line-height:22px;
+				text-decoration:none;
+				color:#666666;
+				margin-left:37px;
+			}
+			#footermiddle .foot2 dd a{
+			    text-decoration:none;
+			    color:#666666;
+			}
+			#footermiddle .foot2 dd a:hover{
+				color:red;
+			}
+			#footermiddle .foot3 a:hover{
+				color:red;
+			}
+			#footermiddle .foot3{
+				height:240px;
+				width:970px;
+			}
+			.foot3 .p1{
+				font-size:12px;
+				color:#666666;
+				text-align:center;
+				height:22.4px;
+				line-height:22.4px;
+				margin-bottom:10px;
+			}
+			.foot3 .p1 span{
+				color:#CCCCCC;
+				margin:0 5px 0 3px;
+			}
+			.foot3 .p1 a{
+				text-decoration:none;
+				color:#666666;
+			}
+			.foot3 .p2{
+				font-size:12px;
+				color:#999999;
+				text-align:center;
+				height:21.6px;
+				line-height:21.6px;
+			}
+			.foot3 .p2 .s{
+				color:#CCCCCC;
+				margin:0 5px 0 3px;
+			}
+			.foot3 .p2 a{
+				text-decoration:none;
+				color:#999999;
+			}
+			.foot3 .p2 img{
+				vertical-align:middle;
+			}
+			.foot3 .p3{
+				margin-top:10px;
+				margin-left:250px;
+				height:28px;
+			}
+			.foot3 .p3 a{
+				display:block;
+				float:left;
+				height:32px;
+				line-height:15px;
+				font-size:13px;
+				color:#666666;
+				margin:0 3px;
+				width:103px;
+				text-decoration:none;
+			}
+			.foot3 .p3 span{
+				display:block;
+				position:relative;
+				left:35px;
+				top:-30px;
+			}
+			.fooot3 .p3 a img{
+				vertical-align:middle;
+			}
+			#recommendbar{
+				width:100%;
+				height:22.6px;
+				margin-bottom:5px;
+			}
+			#recommendbar a{
+				display:block;
+				float:left;
+				margin-right:35px;
+				padding-bottom:3px;
+				text-decoration:none;
+				font-size:12px;
+			}
+			.recommendbarcolor1{
+				color:red;
+				font-weight:700;
+				border-bottom:2px solid red;
+			}
+			.recommendbarcolor2{
+				color:#666666;
+			}
+			#recommendobject{
+				width:100%;
+				height:316px;
+				margin-bottom:20px;
+			}
+			#recommendobject ul{
+				font-size:0;
+				vertical-align:text-bottom;
+			}
+			#recommendobject li{
+				display:inline-block;
+				text-align:center;
+				height:275px;
+				border:1px dashed #CACACA;
+				width:200.5px;
+				padding:20px;
+				list-style:none;
+				font-size:12px;
+				color:#666666;
+				vertical-align:text-bottom;
+			}
+			#recommendobject li .A{
+				text-decoration:none;
+				color:#666666;
+			}
+			#recommendobject li:hover{
+					border:1px solid red;
+			}
+			#recommendobject .B img{
+				border:2px solid #FFFFFF;
+			}
+			#recommendobject .B img:hover{
+				border:2px solid red;
+			}
+			#recommendobject li span{
+				height:36px;
+				padding:5px 0;
+			}
+			#recommendobject li a p{
+				color:red;
+				font-size:14px;
+				margin:5px;
+				font-weight:700;
+			}
+			#cart-thead{
+				padding:5px 0;
+				margin-top:-8px;
+				height:30px;
+				font-size:12px;
+				margin-bottom:10px;
+				border:1px solid #e9e9e9;
+			}
+			#cart-thead .spanone{
+				color:#666666;
+				margin-left:11px;
+				line-height:30px;
+			}
+			#cart-thead .spantwo{
+				color:#666666;
+				margin-left:70px;
+			}
+			#cart-thead .spanthree{
+				color:#666666;
+				margin-left:400px;
+			}
+			#object{
+				height:auto;
+			}
+			#object .shop1{
+				padding-left:11px;
+				height:30px;
+				font-size:12px;
+				vertical-align:middle;
+				border-bottom:2px solid #CCCCCC;
+			}
+			#object .shop1 span{
+				padding:0px 5px;
+				margin-top:5px;
+				display:inline-block;
+				height:16px;
+				background-color:#da0012;
+				color:#FFFFFF;
+				border-radius:2px;
+				font-weight:400;
+			}
+			#object .shop1 img{
+				margin-top:4px;
+				margin-left:350px;
+				vertical-align:middle;
+			}
+			#object .shop2{
+				padding-left:11px;
+				height:30px;
+				border-bottom:2px solid #CCCCCC;
+			}
+			#object .shop2 a:hover{
+				color:red;
+			}
+			#object .shop2 a{
+				display:inline-block;
+				line-height:30px;
+				text-decoration:none;
+				color:#666666;
+			}
+			#object .shop2 span{
+				text-align:center;
+				line-height:30px;
+				font-size:12px;
+				text-decoration:none;
+				margin:0 5px;
+				font-weight:700;
+			}
+			#object .shop2 img{
+				vertical-align:middle;
+			}
+			#object table{
+				border:0.5px solid #CCCCCC;
+				margin-bottom:20px;
+			}
+			#object tr{
+				height:118px;
+				width:970px;
+			}
+			#object td{
+				border-collapse: collapse;
+				padding:10px 5px;
+				border:0px solid #FFFFFF;
+			}
+			#object td a{
+				text-decoration:none;
+				color:inherit;
+				font-size:12px;
+			}
+			#object td a:hover{
+				color:red;
+			}
+			#object .td1 span{
+				background-color:#da0012;
+				padding:0 3px;
+				margin-right:3px;
+				font-size:12px;
+				border-radius:2px;
+				font-weight:400;
+				color:#FFFFFF;
+			}
+			#object .td1{
+				font-size:12px;
+				color:#333333;
+				width:200px;
+			}
+			#object .td2{
+				width:160px;
+				padding-left:20px;
+				font-size:12px;
+				color:#666666;
+			}
+			#object .td3{
+				width:50px;
+				padding-left:40px;
+				line-height:20px;
+				font-weight:400;
+				font-size:12px;
+				color:#333333;
+			}
+			#object .td4{
+				width:100px;
+				padding-left:20px;
+				text-align:center;
+			}
+			#object .td4 input{
+				border:1px solid #CCCCCC;
+				text-align:center;
+				padding:2px 0;
+			}
+			#object .td4 button{
+				border:0.5px solid #CCCCCC;
+				background-color:#FFFFFF;
+				font-size:12px;
+				height:21.5px;
+				width:18px;
+				padding:1px 0;
+			}
+			#object .td5{
+				width:90px;
+				padding-left:35px;
+				font-size:12px;
+				color:#666666;
+				font-weight:700;
+			}
+			#object .td6{
+				padding-right:18px;
+				font-size:12px;
+				color:#666666;
+			}
+			#countlan{
+				height:52px;
+				color:#666666;
+				border:1px solid #F0F0F0;
+				vertical-align:middle;
+				font-size:12px;
+				line-height:50px;
+				padding-left:11px;
+				margin-bottom:20px;
+			}
+			#countlan a{
+				text-decoration:none;
+				color:#666666;
+			}
+			#countlan a:hover{
+				color:red;
+			}
+			#countlan .teshu{
+				font-weight:700;
+			}
+			#counter{
+				display:inline-block;
+				margin-left:367.5px;
+			}
+			#counter img{
+				padding:0 5px;
+				margin-right:10px;
+			}
+			#number{
+				display:inline-block;
+				color:red;
+				width:20px;
+				text-align:center;
+			}
+			#total{
+				display:inline-block;
+				width:80px;
+				font-weight:700;
+				text-align:center;
+				font-size:16px;
+				color:red;
+			}
+			#counter span{
+				marigin:0 5px;
+			}
+			#counter p{
+				display:inline-block;
+				font-weight:bold;
+				font-size:18px;
+				color:#FFFFFF;
+				line-height:52px;
+				width:88.1px;
+				text-align:center;
+				background-color:#E54346;
+			}
+			.backgroundcolorchange{
+				background-color:#FFF4E8;
+			}
+		</style>
+		<script>
+			//点击推荐栏时进行的更改字体和边框的操作
+			function recommendbarcolor(a){
+				//console.log(a);检验
+				if(a.className=="recommendbarcolor2"){//判断当前超链接的状态
+					a.className="recommendbarcolor1";//更改此超链接的字体颜色和下边框
+					var recommend=document.getElementById("recommendbar");//获取推荐栏的位置
+					var guess=recommend.getElementsByTagName("a");//获取对应的超链接的位置
+					//console.log(guess);检验
+					if(a==guess[0]){
+						guess[1].className="recommendbarcolor2";
+					}
+					else{
+						guess[0].className="recommendbarcolor2";
+					}
+				}
+			}
+			function chooseAll(a){//全选操作
+				if(!parseInt(a.value)){
+					var object=document.getElementById("object");
+					//console.log(object);
+					var input=object.getElementsByTagName("input");
+					//console.log(input);
+					for(var i=0,len=input.length;i<len;i++){
+						if(input[i].type=="checkbox"){//当input元素类型是checkbox类型是，进行选中操作
+							input[i].checked="checked";
+						    input[i].value=0;
+							choose(input[i]);//调用choose()函数，使其在value为0时实现变色效果等
+						}
+					}
+					var chooseAll1=document.getElementById("chooseAll1");
+					chooseAll1.checked="checked";
+					chooseAll1.value=1;
+					var chooseAll2=document.getElementById("chooseAll2");
+					chooseAll2.checked="checked";//确保另一全选按钮也保持选中状态
+					chooseAll2.value=1;//且其值为1
+				}
+				else{//执行和上述相反的操作
+					var object=document.getElementById("object");
+					//console.log(object);
+					var input=object.getElementsByTagName("input");
+					//console.log(input);
+					for(var i=0,len=input.length;i<len;i++){
+						if(input[i].type=="checkbox"){
+							input[i].checked="";
+							input[i].value=1;
+							choose(input[i]);//调用choose()函数，使其在value为1时实现变色效果等
+						}
+					}
+					var chooseAll1=document.getElementById("chooseAll1");
+					chooseAll1.checked="";
+					chooseAll1.value=0;
+					var chooseAll2=document.getElementById("chooseAll2");
+					chooseAll2.checked="";//确保另一全选按钮也保持非选中状态
+					chooseAll2.value=0;//且其值为0
+				}
+			}
+			function ifChooseAll1(){
+				var object=document.getElementById("object");
+				//console.log(object);
+				var input=object.getElementsByTagName("input");
+				//console.log(input);
+				//console.log(input[1].type=="checkbox");
+				for(var i=0,len=input.length;i<len;i++){
+					if(input[i].parentNode.nodeName=="TD"&&(input[i].type=="checkbox")&&parseInt(input[i].value)==0){
+						var chooseAll1=document.getElementById("chooseAll1");
+						chooseAll1.checked="";
+						chooseAll1.value=0;
+						var chooseAll2=document.getElementById("chooseAll2");
+						chooseAll2.checked="";//确保两全选按钮均保持非选中状态
+						chooseAll2.value=0;//且其值为0
+						break;
+					}
+					else{
+						if(input[i].type!="checkbox"){
+							var chooseAll1=document.getElementById("chooseAll1");
+							chooseAll1.checked="checked";
+							chooseAll1.value=1;
+							var chooseAll2=document.getElementById("chooseAll2");
+							chooseAll2.checked="checked";//确保两全选按钮均保持选中状态
+							chooseAll2.value=1;//且其值为1
+						}
+					}
+				}
+			}
+			//类似地，可写出部分全选函数
+			function ifChooseAll2(){//实现京东自营等选择框的被动选择功能
+				var table1=document.getElementsByTagName("table")[0];
+				var inputs1=table1.getElementsByTagName("input");
+				var i=0;
+				for(var len=inputs1.length;i<len;i++){
+					if(inputs1[i].type=="checkbox"&&parseInt(inputs1[i].value)==0){
+						var shop1=document.getElementsByClassName("shop1")[0];
+						//console.log(shop1);
+						var input1=shop1.getElementsByTagName("input")[0];
+						input1.value=0;
+						input1.checked="";
+						break;
+					}
+					else{
+						var shop1=document.getElementsByClassName("shop1")[0];
+						//console.log(shop1);
+						input2=shop1.getElementsByTagName("input")[0];
+						input2.value=1;
+						input2.checked="checked";
+					}
+				}
+				var table2=document.getElementsByTagName("table")[1];
+				//console.log(table2);
+				var inputs2=table2.getElementsByTagName("input");
+				i=0;
+				for(var len=inputs2.length;i<len;i++){
+					if(inputs2[i].type=="checkbox"&&parseInt(inputs2[i].value)==0){
+						var shop2=document.getElementsByClassName("shop2")[0];
+						//console.log(shop1);
+						input1=shop2.getElementsByTagName("input")[0];
+						input1.value=0;
+						input1.checked="";
+						break;
+					}
+					else{
+						var shop2=document.getElementsByClassName("shop2")[0];
+						//console.log(shop2);
+						var input2=shop2.getElementsByTagName("input")[0];
+						input2.value=1;
+						input2.checked="checked";
+					}
+				}
+			}
+			function choose1(a){
+				//console.log(a);
+				if(!parseInt(a.value)){//京东自营全选操作
+					var table1=document.getElementsByTagName("table")[0];
+					var inputs=table1.getElementsByTagName("input");
+					for(var i=0,len=inputs.length;i<len;i++){
+						if(inputs[i].type=="checkbox"){
+							inputs[i].value=0;
+							inputs[i].checked="checked";
+							choose(inputs[i]);
+						}
+					}
+					a.value=1;
+				}
+				else{
+					var table1=document.getElementsByTagName("table")[0];
+					var inputs=table1.getElementsByTagName("input");
+					for(var i=0,len=inputs.length;i<len;i++){
+						if(inputs[i].type=="checkbox"){
+							inputs[i].value=1;
+							inputs[i].checked="";
+							choose(inputs[i]);
+						}
+					}
+					a.value=0;
+				}
+				ifChooseAll1();
+			}
+			function choose2(a){
+				//console.log(a);
+				if(!parseInt(a.value)){//悦胜店铺全选操作
+					var table1=document.getElementsByTagName("table")[1];
+					var inputs=table1.getElementsByTagName("input");
+					for(var i=0,len=inputs.length;i<len;i++){
+						if(inputs[i].type=="checkbox"){
+							inputs[i].value=0;
+							inputs[i].checked="checked";
+							choose(inputs[i]);
+						}
+					}
+					a.value=1;
+				}
+				else{
+					var table1=document.getElementsByTagName("table")[1];
+					var inputs=table1.getElementsByTagName("input");
+					for(var i=0,len=inputs.length;i<len;i++){
+						if(inputs[i].type=="checkbox"){
+							inputs[i].value=1;
+							inputs[i].checked="";
+							choose(inputs[i]);
+						}
+					}
+					a.value=0;
+				}
+				ifChooseAll1();
+				calcshuliang();
+			}
+			function choose(a){//选择某商品后实现背景颜色的改变和商品总数总价的改变
+				//console.log(a.value);//查找元素，并确定value值
+				if(!parseInt(a.value)){
+					var tr=a.parentNode.parentNode;//接收该checkbox对应的tr元素
+					//console.log(tr);
+					if(tr.nodeName=="TR"){//确定其为tr元素节点类型
+						tr.className="backgroundcolorchange";
+					}
+					a.value=1;//修改该行的value初值
+				}
+				else{
+					var tr=a.parentNode.parentNode;//接收该checkbox对应的tr元素
+					if(tr.nodeName=="TR"){
+						tr.className="";
+					}
+					a.value=0;//修改value值
+				}
+				ifChooseAll1();
+				ifChooseAll2();
+				calcshuliang();
+			}
+			function calcshuliang(){
+				var object=document.getElementById("object");
+				var inputs=object.getElementsByTagName("input");
+				//console.log(inputs);
+				var count=0;
+				var total=0;
+				//console.log(total);检验
+				for(var i=0,len=inputs.length;i<len;i++){
+					if(inputs[i].parentNode.nodeName=="TD"&&inputs[i].type=="checkbox"&&parseInt(inputs[i].value)==1){
+						var n=parseInt(inputs[i+1].value);
+						count+=n;
+						//计算商品总价
+						var price=parseFloat((inputs[i].parentNode.parentNode.getElementsByClassName("td3")[0].innerHTML).slice(1));//获取单价
+						total+=n*price;
+						//console.log(total);//尝试输出
+					}
+				}
+				document.getElementById("total").innerHTML="&yen;"+total.toFixed(2);//刷新总价的值
+				//console.log(count);//检验数量是否准确
+				var number=document.getElementById("number");//将数量number翻新
+				number.innerHTML=count;
+			}
+			function decrease(btn){
+				var td=btn.parentNode;
+				var input=td.getElementsByTagName("input")[0];//找到对应的input元素
+				var n=parseInt(input.value);
+				if(n>0){
+					input.value=--n;//数量减减且改变input元素的value值
+					var price=(td.parentNode.getElementsByClassName("td3")[0].innerHTML).slice(1);//获取当前商品的价格
+					//console.log(price);
+					td.parentNode.getElementsByClassName("td5")[0].innerHTML="&yen;"+(price*n).toFixed(2);
+					calcshuliang();//重新计算商品总数
+				}
+			}
+			function add(btn){
+				var td=btn.parentNode;
+				var input=td.getElementsByTagName("input")[0];//找到对应的input元素
+				var n=parseInt(input.value);
+				input.value=++n;
+				var price=(td.parentNode.getElementsByClassName("td3")[0].innerHTML).slice(1);//获取当前商品的价格
+				//console.log(price);
+				td.parentNode.getElementsByClassName("td5")[0].innerHTML="&yen;"+(price*n).toFixed(2);
+				calcshuliang();
+			}
+			function ifdeletebar(){
+				var shop1=document.getElementsByClassName("shop1")[0];
+				var shop2=document.getElementsByClassName("shop2")[0];
+				if(Shop1==null){
+					saveshop(shop1,shop2);
+				}
+				if(shop1!=null){
+					var object=shop1.parentNode;
+					if(object.getElementsByTagName("table")[0].getElementsByTagName("tr").length==0){
+						object.removeChild(shop1);//当京东自营栏目下无商品时，删除京东自营栏目
+					}
+				}
+				//类似上面的，写出删除另一栏目的操作
+				var shop2=document.getElementsByClassName("shop2")[0];
+				if(shop2!=null){
+					var object=shop2.parentNode;
+					if(object.getElementsByTagName("table")[1].getElementsByTagName("tr").length==0){
+						object.removeChild(shop2);
+					}
+				}
+				if(object.getElementsByTagName("table")[0].getElementsByTagName("tr").length==0
+				&&object.getElementsByTagName("table")[1].getElementsByTagName("tr").length==0){
+					var middle=document.getElementById("middle");
+					var loginbar=document.getElementById("loginbar");
+					var countlan=document.getElementById("countlan");
+					var cart=document.getElementById("cart-thead");
+					if(loginBar==null){
+						savebar(loginbar,countlan,cart);
+					}
+					middle.removeChild(loginbar);
+					middle.removeChild(countlan);
+					middle.removeChild(cart);
+				}
+			}
+			function deletetr(a){
+				//console.log(a);//确定节点位置
+				var tr=a.parentNode.parentNode;
+				var table=tr.parentNode;
+				if(confirm("确定要删除"+tr.getElementsByClassName("td1")[0].getElementsByTagName("a")[0].innerHTML+"商品吗？")){
+					table.removeChild(tr);//移除table元素下的指定子节点
+				}
+				//实现商品总数的改变（减减）
+				var spzs=document.getElementById("spzs");
+				spzs.innerHTML=parseInt(spzs.innerHTML)-1;
+				calcshuliang();
+				ifdeletebar();
+			}//与上述类似可声明删除多个物品的操作
+			function deletetrs(){
+				var inputs=document.getElementById("object").getElementsByTagName("input");
+				for(var i=0;i<inputs.length;i++){
+					if(inputs[i]){
+						if(inputs[i].type=="checkbox"&&inputs[i].parentNode.nodeName=="TD"&&parseInt(inputs[i].value)==1){
+							//console.log(inputs[i]);
+							deletetr(inputs[i]);
+							i--;
+						}
+					}
+				}
+			}
+			//声明全局变量，用于保存html文档中的三个栏目和两个Shop栏
+			var loginBar;
+			var countLan;
+			var Cart;
+			var Shop1;
+			var Shop2;
+			function saveshop(shop1,shop2){
+				Shop1=shop1;
+				Shop2=shop2;
+			}
+			function savebar(loginbar,countlan,cart){
+				loginBar=loginbar;
+				countLan=countlan;
+				Cart=cart;
+				//console.log(loginBar);
+			}
+			function pushObject(a){
+				//默认加入购物车的商品为京东自营一栏的下方
+				var table=document.getElementById("object").getElementsByTagName("table")[0];
+				//判断购物车中是否有商品
+				var middle=document.getElementById("middle");
+				var object=document.getElementById("object");
+				if(object.getElementsByTagName("table")[0].getElementsByTagName("tr").length==0
+				&&object.getElementsByTagName("table")[1].getElementsByTagName("tr").length==0){//此时需组建相关栏目
+					//console.log(Cart);//检验Cart是否就绪
+					middle.insertBefore(Cart,object);
+					middle.insertBefore(loginBar,Cart);
+					var table=object.getElementsByTagName("table")[0];
+					//console.log(table);
+					object.insertBefore(Shop1,table);
+					var recommend=document.getElementById("recommend");
+					middle.insertBefore(countLan,recommend);
+				}
+				else{
+					//可能有商品，但不在京东自营栏目下，那么需添加京东自营栏目
+					if(object.getElementsByTagName("table")[0].getElementsByTagName("tr").length==0){
+						var table=object.getElementsByTagName("table")[0];
+						object.insertBefore(Shop1,table);
+					}
+				}
+				//开始将按钮对应物品加入购物车之中，动态操作表格
+				//！！另外可将同类商品的框架添加，仅改变其中元素的属性值
+				var tbody=object.getElementsByTagName("table")[0].getElementsByTagName("tbody")[0];
+				//console.log(tbody);
+				var tr=tbody.insertRow();
+				//第一列
+				var td1=tr.insertCell();
+				var input1=document.createElement("input");
+				input1.type="checkbox";
+				input1.value=0;
+				input1.onclick=function(){choose(this);}
+				td1.appendChild(input1);
+				//第二列
+				var td2=tr.insertCell();
+				var a1=document.createElement("a");
+				td2.appendChild(a1);
+				a1.href="#";
+				var img1=document.createElement("img");
+				var wsrc=a.parentNode.getElementsByTagName("img")[0].src.split("_");//获取推荐商品的图片地址
+				//console.log(wsrc);//尝试输出,可知两图片链接仅相差一个下划线
+				var zsrc=wsrc[0]+".png";//下划线前的链接地址与格式表示拼接
+				img1.src=zsrc;
+				a1.appendChild(img1);
+				//第三列
+				var td3=tr.insertCell();
+				td3.className="td1";
+				var span=document.createElement("span");
+				span.innerHTML="京东超市";
+				td3.appendChild(span);
+				var a2=document.createElement("a");
+				a2.href="#";
+				a2.innerHTML=a.parentNode.getElementsByTagName("span")[0].innerHTML;
+				td3.appendChild(a2);
+				//第四列
+				var td4=tr.insertCell();
+				td4.className="td2";
+				var inners=a2.innerHTML.split(" ");
+				//console.log(inners);
+				td4.innerHTML=inners[1]+inners[4];
+				//第五列
+				var td5=tr.insertCell();
+				td5.className="td3";
+				td5.innerHTML=a.parentNode.getElementsByTagName("p")[0].innerHTML;
+				//第六列
+				var td6=tr.insertCell();
+				td6.className="td4";
+				var button1=document.createElement("button");
+				button1.onclick=function(){decrease(this);}
+				button1.innerHTML="-";
+				td6.appendChild(button1);
+				var input2=document.createElement("input");
+				input2.type="text";
+				input2.size=3;
+				input2.value=1;
+				td6.appendChild(input2);
+				var button2=document.createElement("button");
+				button2.onclick=function(){add(this);}
+				button2.innerHTML="+";
+				td6.appendChild(button2);
+				//第七列
+				var td7=tr.insertCell();
+				td7.className="td5";
+				td7.innerHTML=a.parentNode.getElementsByTagName("p")[0].innerHTML;
+				//第八列
+				var td8=tr.insertCell();
+				td8.className="td6";
+				var a3=document.createElement("a");
+				a3.href="#";
+				a3.onclick=function(){deletetr(this);}
+				a3.innerHTML="删除";
+				td8.appendChild(a3);
+				var br=document.createElement("br");
+				td8.appendChild(br);
+				var a4=document.createElement("a");
+				a4.href="#";
+				a4.innerHTML="移到我的关注";
+				td8.appendChild(a4);
+				//更新全选状态和商品相关信息
+				ifChooseAll1();
+				ifChooseAll2();
+				calcshuliang();
+				//实现商品总数量的改变
+				var spzs=document.getElementById("spzs");
+				spzs.innerHTML=parseInt(spzs.innerHTML)+1;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			<div class="div1">
+				<a href="#"><img src="./img/小房子_03.png"/>京东首页</a>
+				<a href="#"id="address"><img src="img/地址图标_03.png"/>江西</a>
+			</div>
+			<div class="div2">
+				<a href="#">你好，请登录</a>&nbsp;
+				<a href="#" id="red">免费注册</a>
+				|&nbsp;&nbsp;<a href="#">我的订单</a>
+				|&nbsp;&nbsp;<a href="#">我的京东<img src="img/IMG_PITU_20200501_120346.jpg"/></a>
+				|&nbsp;&nbsp;<a href="#">京东会员</a>
+				|&nbsp;&nbsp;<a href="#">企业采购<img src="img/IMG_PITU_20200501_120346.jpg"/></a>
+				|&nbsp;&nbsp;<span>客户服务<img src="img/IMG_PITU_20200501_120346.jpg"/></span>
+				|&nbsp;&nbsp;<span>网站导航<img src="img/IMG_PITU_20200501_120346.jpg"/></span>
+				|&nbsp;&nbsp;<a href="#">手机京东</a>
+			</div>
+		</div>
+		<div id="nav">
+			<img src="img/京东购物车项目.png"/><span>购物车</span>
+			<input type="text"id="input"value="自营"></input><button type="button">搜索</button>
+		</div>
+		<div id="aticle">
+			<div id="left"></div>
+			<div id="middle">
+				<div id="login">
+					<img src="img/三角警告_07.png"/>
+					<span>您还没有登录！登录后购物车的商品将保存到您账号中</span>
+					<button type="button">立即登录</button>
+				</div>
+				<div id="loginbar">
+					<a href="#">全部商品</a>&nbsp;<span id="spzs">3</span>
+					<span class="right">配送至：</span>
+					<select type="select">
+						<option>江西南昌市红谷滩新区九龙湖新城</option>
+					</select>
+					<p>—————</p>
+				</div>
+				<div id="cart-thead">
+					<span class="spanone"><input type="checkbox"value=0 id="chooseAll1"onclick="chooseAll(this)">&nbsp;&nbsp;全选</span>
+					<span class="spantwo">商品</span>
+					<span class="spanthree">单价</span>
+					<span class="spantwo">数量</span>
+					<span class="spantwo">小计</span>
+					<span class="spantwo">操作</span>
+				</div>
+				<div id="object">
+					<div class="shop1">
+						<input type="checkbox"value=0 onclick="choose1(this)"/>
+						<a href="#"><span>京东自营</span></a>
+						<img src="img/优惠券.png"/>
+					</div>
+					<table>
+						<tr id="mosilian">
+							<td><input type="checkbox"value=0 onclick="choose(this)"/></td>
+							<td><a href="#"><img src="img/莫斯利安.png"/></a></td>
+							<td class="td1"><span>京东超市</span><a href="#">光明 莫斯利安 常温酸奶酸牛奶（原味）350g*6盒/礼盒装</a></td>
+							<td class="td2">莫斯利安350g*6盒/礼盒装</td>
+							<td class="td3">&yen;34.80</td>
+							<td class="td4"><button onclick="decrease(this)">-</button><input type="text"size="3"value="1"/><button onclick="add(this)">+</button></td>
+							<td class="td5">&yen;34.80</td>
+							<td class="td6"><a href="#"onclick="deletetr(this)">删除</a><br/><a href="#">移到我的关注</a></td>
+						</tr>
+						<tr id="fulin">
+							<td><input type="checkbox"value=0 onclick="choose(this)"/></td>
+							<td><a href="#"><img src="img/福临门大米.png"/></a></td>
+							<td class="td1"><span>京东超市</span><a href="#">福临门 东北大米 水晶米 中粮出品大米5kg</a></td>
+							<td class="td2">水晶米5kg</td>
+							<td class="td3">&yen;27.90</td>
+							<td class="td4"><button onclick="decrease(this)">-</button><input type="text"size="3"value="1"/><button onclick="add(this)">+</button></td>
+							<td class="td5">&yen;27.90</td>
+							<td class="td6"><a href="#"onclick="deletetr(this)">删除</a><br/><a href="#">移到我的关注</a></td>
+						</tr>
+					</table>
+					<div class="shop2">
+						<input type="checkbox"value=0 onclick="choose2(this)"/>
+						<img src="./img/京东好店.png"/>
+						<a href="#"><span>悦胜官方旗舰店</span></a>
+						<img src="img/笑脸.png"/>
+					</div>
+					<table>
+						<tr id="majiaoyu">
+							<td><input type="checkbox"value=0 onclick="choose(this)"/></td>
+							<td><a href="#"><img src="./img/鱼肉.png"/></a></td>
+							<td class="td1"><img src="img/京东_18.png"/><a href="#">【2份9折，3份8折】悦胜 海南马鲛鱼整条切片 2斤装 冷冻鲅鱼段</a></td>
+							<td class="td2"></td>
+							<td class="td3">&yen;118.00</td>
+							<td class="td4"><button onclick="decrease(this)">-</button><input type="text"size="3"value="1"/><button onclick="add(this)">+</button></td>
+							<td class="td5">&yen;118.00</td>
+							<td class="td6"><a href="#"onclick="deletetr(this)">删除</a><br/><a href="#">移到我的关注</a></td>
+						</tr>
+					</table>
+				</div>
+				<div id="countlan">
+					<span><input type="checkbox"value=0 id="chooseAll2"onclick="chooseAll(this)">&nbsp;&nbsp;全选</span>
+					<a onclick="deletetrs()">&nbsp;删除选中商品&nbsp;</a>
+					<a href="#">&nbsp;移到关注&nbsp;</a>
+					<a href="#"class="teshu">&nbsp;清理购物车</a>
+					<div id="counter">
+						<span class="span1">已选择<span id="number">0</span>件商品<img src="img/WPS图片-修改尺寸.png"/></span>
+						<span class="span2">总价：<span id="total">&yen;0.00</span></span>
+						<a><p>去结算</p></a>
+					</div>
+				</div>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+				<div id="recommend">
+					<div id="recommendbar">
+						<p><a href="#" class="recommendbarcolor1"onclick="recommendbarcolor(this);">猜你喜欢</a>
+						<a href="#"class="recommendbarcolor2"onclick="recommendbarcolor(this);">随手购</a></p>
+					</div>
+					<div id="recommendobject">
+						<ul>
+							<li><a class="A"href="#">
+								<img src="img/莫斯利安_big.png"/><br/>
+								<span>光明 莫斯利安 常温酸奶酸牛奶 （原味） 350g*6盒/礼盒装</span>
+								<p name="price">&yen;34.80</p>
+								<a class="B"onclick="pushObject(this)"><img src="img/加入_03.png"/></a>
+							</a></li>
+							<li><a class="A"href="#">
+								<img src="img/牛肉.png"/><br/>
+								<span>科尔沁 休闲肉脯零食 内蒙古特产 手撕风干 牛肉干孜然味400g</span>
+								<p name="price">&yen;79.90</p>
+								<a class="B"href="#"onclick="pushObject(this)"><img src="img/加入_03.png"/></a>
+							</a></li>
+							<li><a class="A"href="#">
+								<img src="img/德芙_03.png"/><br/>
+								<span>德芙Dove 巧克力分享碗装 么锦牛奶榛仁葡萄干巧克力 婚庆糖果礼品 休闲</span>
+								<p name="price">&yen;32.90</p>
+								<a class="B"href="#"onclick="pushObject(this)"><img src="img/加入_03.png"/></a>
+							</a></li>
+							<li><a class="A"href="#">
+								<img src="img/播放器_03.png"/><br/>
+								<span>网易云音乐 车载蓝牙播放器 车载充电器 一拖二USB车充 汽车车载mp3音乐</span>
+								<p name="price">&yen;119.00</p>
+								<a class="B"href="#"onclick="pushObject(this)"><img src="img/加入_03.png"/></a>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="right">
+				<div id="absolute">
+					<img src="img/关注_03.png"/>
+					<img src="img/怀疑_03.png"/>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<hr class="hr2"/>
+			<hr class="hr1"/>
+			<div id="footerleft"></div>
+			<div id="footermiddle">
+				<div class="foot1">
+					<img src="img/多_03.png"/><span>品类齐全，轻松购物</span>
+					<img src="img/快_03.png"/><span>多仓直发，极速配送</span>
+					<img src="img/好_03.png"/><span>正品行货，精致服务</span>
+					<img src="img/省_03.png"/><span>天天低价，畅选无忧</span>
+				</div>
+				<div class="foot2">
+					<dl>
+						<dt>购物指南</dt>
+						<dd><a href="#">购物流程</a></dd>
+						<dd><a href="#">会员介绍</a></dd>
+						<dd><a href="#">生活旅行/团购</a></dd>
+						<dd><a href="#">常见问题</a></dd>
+						<dd><a href="#">大家电</a></dd>
+						<dd><a href="#">联系客服</a></dd>
+					</dl>
+					<dl>
+						<dt>配送方式</dt>
+						<dd><a href="#">上门自提</a></dd>
+						<dd><a href="#">211限时达</a></dd>
+						<dd><a href="#">配送服务查询</a></dd>
+						<dd><a href="#">配送费收取标准</a></dd>
+						<dd><a href="#">海外配送</a></dd>
+					</dl>
+					<dl>
+						<dt>支付方式</dt>
+						<dd><a href="#">货到付款</a></dd>
+						<dd><a href="#">在线支付</a></dd>
+						<dd><a href="#">分期付款</a></dd>
+						<dd><a href="#">公司转账</a></dd>
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd><a href="#">售后政策</a></dd>
+						<dd><a href="#">价格保护</a></dd>
+						<dd><a href="#">退款说明</a></dd>
+						<dd><a href="#">返修/退换货</a></dd>
+						<dd><a href="#">取消订单</a></dd>
+					</dl>
+					<dl>
+						<dt>特色服务</dt>
+						<dd><a href="#">夺宝岛</a></dd>
+						<dd><a href="#">DIY装机</a></dd>
+						<dd><a href="#">延保服务</a></dd>
+						<dd><a href="#">京东E卡</a></dd>
+						<dd><a href="#">京东通信</a></dd>
+						<dd><a href="#">京鱼座智能</a></dd>
+					</dl>
+				</div>
+				<div class="foot3">
+					<p class="p1">
+						<a href="#">关于我们</a>
+						<span>|</span><a href="#">联系我们</a>
+						<span>|</span><a href="#">联系客服</a>
+						<span>|</span><a href="#">合作招商</a>
+						<span>|</span><a href="#">商家帮助</a>
+						<span>|</span><a href="#">营销中心</a>
+						<span>|</span><a href="#">手机京东</a>
+						<span>|</span><a href="#">友情链接</a>
+						<span>|</span><a href="#">销售联盟</a>
+						<span>|</span><a href="#">京东社区</a>
+						<span>|</span><a href="#">风险监测</a>
+						<span>|</span><a href="#">隐私政策</a>
+						<span>|</span><a href="#">京东公益</a>
+						<span>|</span><a href="#">English Site</a>
+						<span>|</span><a href="#">Media & IR</a>
+					</p>
+					<p class="p2">
+						<a href="#">京公网安备 11000002000088号</a>
+						<span class="s">|</span><span>京ICP证070359号</span>
+						<span class="s">|</span><a href="#">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>
+						<span class="s">|</span>新出发京零 字第大120007号</span>
+					</p>
+					<p class="p2">
+						<span>互联网出版许可证编号新出网证(京)字150号</span>
+						<span class="s">|</span><a href="#">出版物经营许可证</a>
+						<span class="s">|</span><a>网络文化经营许可证京网文[2014]2148-348号</a>
+						<span class="s">|</span><span>违法和不良信息举报电话：4006561155</span>
+					</p>
+					<p class="p2">
+						<span>Copyright © 2004 - 2020 京东JD.com 版权所有</span>
+						<span class="s">|</span><span>消费者维权热线：4006067733</span>
+						<span class="s">|</span><a>经营证照</a>
+						<span class="s">|</span><span>(京)网械平台备字(2018)第00003号</span>
+						<span class="s">|</span><a>营业执照</a>
+					</p>
+					<p class="p2">
+						<!-- <a href="#"><img src="./img/地球_03.png"/>Global Site</a> -->
+						<!-- <a href="#"><img src="img/国旗1_03.png"/>Cont Poccnn</a> -->
+						<a href="#"><img src="img/国旗_03.png"/></a>
+					</p>
+					<p class="p2">
+						<span>京东旗下网站：</span>
+						<a href="#">京东钱包</a>
+						<span class="s">|</span><a href="#">京东智联云</a>
+					</p>
+					<p class="p3">
+						<a href="#"><img src="img/网站_03.png"/><span>可信网站<br/>信用评价</span></a>
+						<a href="#"><img src="img/网警_03.png"/><span>网络警察<br/>提醒您</span></a>
+						<a href="#"><img src="img/诚信_03.png"/><span>诚信网站</span></a>
+						<a href="#"><img src="img/互联_03.png"/><span>中国互联网<br/>举报中心</span></a>
+						<a href="#"><img src="img/下载_03.png"/><span>网络举报<br/>App下载</span></a>
+					</p>
+				</div>
+			</div>
+			<div id="footerright"></div>
+		</div>
+	</body>
+</html>
